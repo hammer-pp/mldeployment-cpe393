@@ -10,11 +10,11 @@ cd "project folder directory"
 docker build -t ml-model .
 
 # Run Docker container
-docker run -p 9000:9000 ml-model
+docker run -p 5001:5001 ml-model
 
 # Test the API in new terminal
 
-curl -X POST http://localhost:9000/predict \
+curl -X POST http://localhost:5001/predict \
      -H "Content-Type: application/json" \
      -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
 
